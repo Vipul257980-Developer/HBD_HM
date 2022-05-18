@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Happy Birthday Harshul</title>
+  </head>
+  <body onload="typeWriter()">
+    <script>
+      var i = 0;
+      var txt =
+        "I'm so grateful you came into my life when you did. Thank you for all that you've brought to my life. I'm so proud of you and for all that you do. Happy Birthday to my most deserving friend!";
+      var speed = 80;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("demo").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+    </script>
+    <canvas id="my-canvas" class="active"></canvas>
+    <script src="index.min.js"></script>
+    <script>
+      let confe = document.querySelector("#my-canvas");
+
+      var confettiSettings = {
+        target: "my-canvas",
+        max: "260",
+        animate: "true",
+        respawn: "true",
+        props: ["circle", "square", "triangle", "line"],
+        rotate: "true",
+      };
+      var confetti = new ConfettiGenerator(confettiSettings);
+      confetti.render();
+    </script>
+    <section>
+      <div class="container">
+        <header>
+          <a class="logo"> For My Best Friend Harshul Matia </a>
+        </header>
+        <div class="content">
+          <h2>Happy Birthday Harshul</h2>
+          <p id="demo"></p>
+        </div>
+        <div class="imgBx">
+          <img id="Harshul_Image" src="Harshul_Image_1.jpg" />
+        </div>
+
+        <ul class="sci">
+          <li>
+            <a href="https://www.facebook.com/harshul.matia" target="_blank">
+              <img src="facebook.png" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/lucifer_charmence/"
+              target="_blank"
+            >
+              <img src="instagram.png" />
+            </a>
+          </li>
+        </ul>
+        <div class="copyright">
+          <p class="copyrightText">Made By 🤗 VIPUL</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
